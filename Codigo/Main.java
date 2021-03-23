@@ -1,4 +1,4 @@
-import java.util.Arrays;
+﻿import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.LinkedList;
@@ -363,5 +363,5 @@ class Main {
     }
 }
 
-// javac Main.java && java Main < t.txt 
-// javac Main.java && java Main < pontos.txt 
+// javac Main.java && java Main < dominio_input.txt 
+// javac Main.java && java Main < pontos_input.txt 
