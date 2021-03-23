@@ -1,8 +1,8 @@
-﻿import java.util.Arrays;
-import java.util.Scanner;
-import java.util.Random;
-import java.util.LinkedList;
 import java.util.TreeSet;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.Random;
 class Main {
     static Scanner in = new Scanner(System.in);
     static LinkedList<Ponto> candidato = new LinkedList<Ponto>();
@@ -287,12 +287,15 @@ class Main {
      */
      public static void hill_Climbing(char f, Ponto[] candidato ){ // Recebe como 
         Ponto[] atual = new Ponto[candidato.length];
+        Arquivo a = new Arquivo();
+        
         System.arraycopy(candidato, 0, atual, 0, candidato.length);
         while(true){
             Ponto[] Vizinho = proximo(atual,f);
             System.out.println("Atual: " + Arrays.toString(atual) + " Vizinho: " + Arrays.toString(Vizinho));
             System.out.println(Qconflitos(atual) + " " + Qconflitos(Vizinho) );
             if(Qconflitos(Vizinho) >= Qconflitos(atual)){
+                a.escreveCoordenada(Vizinho);
                 System.out.println("Fim");
                 return;
             }
@@ -359,7 +362,7 @@ class Main {
         //q1();
         //q2("b"); // flag a = questão 2a, flag b = questão 2b
         //q3();
-        q4('b');
+        q4('c');
     }
 }
 
