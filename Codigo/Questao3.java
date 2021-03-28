@@ -169,6 +169,23 @@ public class Questao3 extends Questao2{
         return atualCopia;
         
     }
+    
+    public Boolean pontosColineares(Ponto[] pontos){
+       for(int i=0; i<pontos.length; i++){
+       for(int j=0; j<i; j++){
+                for(int k=j+1; k<i; k++){
+                       
+                    if(((pontos[j].x)(pontos[k].y) + (pontos[k].x)(pontos[i].x)+(pontos[k].y)(pontos[i].y)-(pontos[k].y)(pontos[i].x)-(pontos[j].x)(pontos[i].y)-(pontos[k].y)(pontos[k].x))==0){
+                        return true; 
+                           
+                       }
+                   }
+                
+                }
+
+         }
+         return false;
+   }
 
     public void q3(Scanner in) {
         int N = in.nextInt();       
